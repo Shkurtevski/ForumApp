@@ -1,0 +1,12 @@
+@use "../../abstracts/variables" as var;
+@use "../../abstracts/mixins" as mix;
+@use "sass:math";
+
+.discover {
+  @extend %wrap;
+  @extend %w-100-h-100;
+  background-color: var.$background-color-primary;
+  color: var.$text-color-primary;
+  
+  overflow-y: auto; 
+}

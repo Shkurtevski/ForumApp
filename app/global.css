@@ -32,13 +32,13 @@ ul {
   padding: 0.7rem 2rem;
 }
 
-.banner .wrapper {
+.discover, .banner .wrapper {
   width: 80%;
   margin-left: auto;
   margin-right: auto;
 }
 @media (max-width: 1024px) {
-  .banner .wrapper {
+  .discover, .banner .wrapper {
     width: 100%;
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
@@ -60,13 +60,16 @@ ul {
   flex-direction: column;
 }
 
+.discover, .banner .wrapper {
+  width: 100%;
+  height: 100vh;
+}
+
 .banner {
   background-image: url("../../images/app_banner.png");
 }
 .banner .wrapper {
   text-align: center;
-  width: 100%;
-  height: 100vh;
   padding: 2rem 0;
 }
 .banner .wrapper h3 {
@@ -75,4 +78,10 @@ ul {
 }
 .banner .wrapper h3 span {
   color: #FEDC56;
+}
+
+.discover {
+  background-color: #222121;
+  color: #fff;
+  overflow-y: auto;
 }/*# sourceMappingURL=global.css.map */

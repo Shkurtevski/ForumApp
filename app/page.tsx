@@ -9,7 +9,7 @@ const Home: NextPage = () => {
           Activate community and LTV <br /> <span>on-site</span> where they
           belong.
         </h3>
-        <Link href="/">
+        <Link href="/discover">
           <button className="btn-primary">Discover</button>
         </Link>
       </div>
