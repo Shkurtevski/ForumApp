@@ -1,0 +1,12 @@
+@use "../abstracts/variables" as var;
+@use "sass:math";
+
+
+.btn-primary {
+  border-radius: var.$border-radius;
+  color: var.$text-color-secondary;
+  background-color: var.$text-color-yellow;
+  font-weight: var.$font-weight-bold;
+  border: none;
+  padding: 0.7rem 2rem;
+}

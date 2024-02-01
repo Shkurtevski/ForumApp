@@ -1,0 +1,23 @@
+@use "../../abstracts/variables" as var;
+@use "../../abstracts/mixins" as mix;
+@use "sass:math";
+
+.banner {
+  @extend %background-image-setup;
+  background-image: url("../../images/app_banner.png");
+  .wrapper {
+    @extend %wrap;
+    @extend %flex-between-column;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    padding: 2rem 0;
+    h3 {
+      padding-top: 2rem;
+      color: var.$text-color-primary;
+      span {
+        color: var.$text-color-yellow;
+      }
+    }
+  }
+}

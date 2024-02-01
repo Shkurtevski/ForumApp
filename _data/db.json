@@ -1,0 +1,30 @@
+{
+  "discover": [
+    {
+      "id": "1",
+      "title": "NBPA",
+      "description": "Let's play together. Get to know your favorite players and support their journey. Get involved HERE.",
+      "image": "./images/NBA.webp"
+    },
+    {
+      "id": "2",
+      "title": "Adidas",
+      "description": "'Home of Classics showcases' showcases how the boundaries of creativity are pushed further when communities come together."
+    },
+    {
+      "id": "3",
+      "title": "CARMEL Music",
+      "description": "Get to know Carmel, his story, and support his journey. Vote and get exclusive access."
+    },
+    {
+      "id": "4",
+      "title": "Karate Combat",
+      "description": "A one stop shop for creators. Build your empire and connect with your community without switching apps."
+    },
+    {
+      "id": "5",
+      "title": "Swordpay",
+      "description": "Let's play together. Get to know your favorite fighters and support their journey. Vote and get rewarded."
+    }
+  ]
+}

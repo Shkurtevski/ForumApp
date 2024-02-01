@@ -1,1 +1,78 @@
-/*# sourceMappingURL=global.css.map */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+p,
+ul {
+  margin-top: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.btn-primary {
+  border-radius: 0.3rem;
+  color: #141414;
+  background-color: #FEDC56;
+  font-weight: 700;
+  border: none;
+  padding: 0.7rem 2rem;
+}
+
+.banner .wrapper {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 1024px) {
+  .banner .wrapper {
+    width: 100%;
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+  }
+}
+
+.banner {
+  max-width: 100%;
+  background-color: #222121;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.banner .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.banner {
+  background-image: url("../../images/app_banner.png");
+}
+.banner .wrapper {
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+  padding: 2rem 0;
+}
+.banner .wrapper h3 {
+  padding-top: 2rem;
+  color: #fff;
+}
+.banner .wrapper h3 span {
+  color: #FEDC56;
+}/*# sourceMappingURL=global.css.map */
