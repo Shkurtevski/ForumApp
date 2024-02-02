@@ -10,6 +10,47 @@
   .discover-wrapper {
     @extend %wrap;
     .discover-content {
+      .heading-wrapper {
+        display: flex;
+        h1 {
+          font-size: var.$heading-size-medium;
+          margin-right: 0.5rem;
+        }
+        svg {
+          margin-top: 0.6rem;
+        }
+      }
+
+      .search-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+        width: 100%;
+        .search-group-input {
+          width: 100%;
+          margin-right: 1rem;
+          input {
+            height: 2.5rem;
+            background-color: var.$background-color-secondary;
+            outline: none;
+            width: 100%;
+            &::placeholder {
+              padding-left: 0.5rem;
+              font-size: var.$font-size-base;
+            }
+          }
+        }
+        .search-group-hamburger {
+          margin-right: 1rem;
+          
+        }
+        .search-group-search {
+          background-color: var.$text-color-yellow;
+          padding: 0.3rem ;
+          border-radius: var.$border-radius;
+        }
+      }
       .discover-content-wrapper {
         display: flex;
         flex-wrap: wrap;

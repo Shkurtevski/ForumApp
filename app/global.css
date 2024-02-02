@@ -36,7 +36,7 @@ p {
 }
 
 .btn-primary {
-  border-radius: 0.3rem;
+  border-radius: 0.8rem;
   color: #141414;
   background-color: #FEDC56;
   font-weight: 700;
@@ -96,6 +96,49 @@ p {
   background-color: #222121;
   color: #fff;
   overflow-y: auto;
+}
+.discover .discover-wrapper .discover-content .heading-wrapper {
+  display: flex;
+}
+.discover .discover-wrapper .discover-content .heading-wrapper h1 {
+  font-size: 2.25rem;
+  margin-right: 0.5rem;
+}
+.discover .discover-wrapper .discover-content .heading-wrapper svg {
+  margin-top: 0.6rem;
+}
+.discover .discover-wrapper .discover-content .search-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+.discover .discover-wrapper .discover-content .search-wrapper .search-group-input {
+  width: 100%;
+  margin-right: 1rem;
+}
+.discover .discover-wrapper .discover-content .search-wrapper .search-group-input input {
+  height: 2.5rem;
+  background-color: #141414;
+  outline: none;
+  width: 100%;
+}
+.discover .discover-wrapper .discover-content .search-wrapper .search-group-input input::-moz-placeholder {
+  padding-left: 0.5rem;
+  font-size: 1rem;
+}
+.discover .discover-wrapper .discover-content .search-wrapper .search-group-input input::placeholder {
+  padding-left: 0.5rem;
+  font-size: 1rem;
+}
+.discover .discover-wrapper .discover-content .search-wrapper .search-group-hamburger {
+  margin-right: 1rem;
+}
+.discover .discover-wrapper .discover-content .search-wrapper .search-group-search {
+  background-color: #FEDC56;
+  padding: 0.3rem;
+  border-radius: 0.8rem;
 }
 .discover .discover-wrapper .discover-content .discover-content-wrapper {
   display: flex;
