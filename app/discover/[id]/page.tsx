@@ -41,10 +41,11 @@ const ChannelPage: NextPage<{ params: DataType }> = async ({ params }) => {
           <h2>{channel.name}</h2>
           <Image
             src={channel.image}
-            alt={channel.title}
+            alt={channel.name}
             width={300}
             height={70}
             quality={100}
+            priority
             style={{ objectFit: "cover" }}
           />
           <p>{channel.description_one}</p>
