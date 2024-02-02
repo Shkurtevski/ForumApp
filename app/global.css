@@ -123,6 +123,9 @@ p {
   background-color: #141414;
   outline: none;
   width: 100%;
+  color: #fff;
+  padding-left: 0.5rem;
+  font-size: 1rem;
 }
 .discover .discover-wrapper .discover-content .search-wrapper .search-group-input input::-moz-placeholder {
   padding-left: 0.5rem;

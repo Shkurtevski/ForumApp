@@ -35,6 +35,9 @@
             background-color: var.$background-color-secondary;
             outline: none;
             width: 100%;
+            color: var.$text-color-primary;
+            padding-left: 0.5rem;
+            font-size: var.$font-size-base;
             &::placeholder {
               padding-left: 0.5rem;
               font-size: var.$font-size-base;
