@@ -79,9 +79,27 @@
   background-size: contain;
 }
 
+%channel-background-image-setup {
+  background-position: center;
+  background-size: contain;
+}
+
+%flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 %flex-between-column {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+%flex-center-column {
+  display: flex;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
 }

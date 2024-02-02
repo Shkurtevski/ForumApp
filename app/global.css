@@ -23,6 +23,10 @@ ul {
   list-style-type: none;
 }
 
+img {
+  max-width: 100%;
+}
+
 h1 {
   margin-bottom: 1rem;
 }
@@ -44,13 +48,13 @@ p {
   padding: 0.7rem 2rem;
 }
 
-.discover .discover-wrapper, .banner .wrapper {
+.channel-page .channel-page-wrapper, .discover .discover-wrapper, .banner .wrapper {
   width: 80%;
   margin-left: auto;
   margin-right: auto;
 }
 @media (max-width: 1024px) {
-  .discover .discover-wrapper, .banner .wrapper {
+  .channel-page .channel-page-wrapper, .discover .discover-wrapper, .banner .wrapper {
     width: 100%;
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
@@ -65,14 +69,32 @@ p {
   background-size: contain;
 }
 
-.banner .wrapper {
+.channel-page {
+  background-position: center;
+  background-size: contain;
+}
+
+.discover .discover-wrapper .discover-content .search-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.channel-page .channel-page-wrapper, .banner .wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
 }
 
-.discover, .banner .wrapper {
+.channel-page .channel-page-wrapper .channel-page-content-two {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.channel-page .channel-page-wrapper, .discover, .banner .wrapper {
   width: 100%;
   height: 100vh;
 }
@@ -108,9 +130,6 @@ p {
   margin-top: 0.6rem;
 }
 .discover .discover-wrapper .discover-content .search-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   margin-bottom: 2rem;
   width: 100%;
 }
@@ -170,4 +189,17 @@ p {
   margin-bottom: 0.5rem;
   border-radius: 2rem;
   border: 0.1rem solid #ececec;
+}
+
+.channel-page {
+  background-image: url("../../images/channel_background.jpg");
+  color: #fff;
+}
+.channel-page .channel-page-wrapper .channel-page-content-two img {
+  margin-bottom: 0.5rem;
+}
+.channel-page .channel-page-wrapper .channel-page-content-two p {
+  margin-bottom: 0;
+  font-size: 0.8125rem;
+  color: #cacaca;
 }/*# sourceMappingURL=global.css.map */

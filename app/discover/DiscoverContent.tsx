@@ -4,6 +4,7 @@ import { CardType } from "../interfaces";
 import { HiMiniXMark } from "react-icons/hi2";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoIosSearch, IoIosArrowDown } from "react-icons/io";
+import Link from "next/link";
 
 async function getCards() {
   const res = await fetch(" http://localhost:4000/discover", {
@@ -21,7 +22,7 @@ const DiscoverContent: NextPage = async () => {
       <HiMiniXMark size={28} />
       <div className="heading-wrapper">
         <h1>Discover</h1>
-        <IoIosArrowDown size={20}/>
+        <IoIosArrowDown size={20} />
       </div>
       <div className="search-wrapper">
         <div className="search-group-hamburger">
@@ -41,7 +42,9 @@ const DiscoverContent: NextPage = async () => {
       </div>
       <div className="discover-content-wrapper">
         {cards.map((card: CardType) => (
-          <Card key={card.id} {...card} />
+          <Link key={card.id} href={`/discover/${card.id}`}>
+            <Card {...card} />
+          </Link>
         ))}
       </div>
     </div>

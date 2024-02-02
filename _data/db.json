@@ -8,8 +8,9 @@
       "channel": {
         "id": "nbpa_channel_1",
         "name": "NBPA",
-        "image": "/nbpa_logo.png",
-        "description": "Get to know your favorite players and support their journey..."
+        "image": "https://picsum.photos/id/102/200/300",
+        "description_one": "Get to know your favorite players",
+        "description_two": "and support their journey..."
       }
     },
     {

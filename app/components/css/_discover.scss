@@ -20,11 +20,8 @@
           margin-top: 0.6rem;
         }
       }
-
       .search-wrapper {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @extend %flex-between;
         margin-bottom: 2rem;
         width: 100%;
         .search-group-input {
@@ -46,11 +43,10 @@
         }
         .search-group-hamburger {
           margin-right: 1rem;
-          
         }
         .search-group-search {
           background-color: var.$text-color-yellow;
-          padding: 0.3rem ;
+          padding: 0.3rem;
           border-radius: var.$border-radius;
         }
       }

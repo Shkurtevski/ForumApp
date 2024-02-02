@@ -1,6 +1,9 @@
 @use "../abstracts/variables" as var;
 @use "sass:math";
 
+img {
+  max-width: 100%;
+}
 h1 {
   margin-bottom: 1rem;
 }

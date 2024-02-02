@@ -15,7 +15,6 @@ const Card: NextPage<CardType> = ({ title, description, image }) => {
           style={{ objectFit: "cover" }}
           loading="lazy"
         />
-
         <h2>{title}</h2>
         <p>{description}</p>
       </div>
