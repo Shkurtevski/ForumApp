@@ -65,5 +65,12 @@
         "description_two": "and support their journey..."
       }
     }
+  ],
+  "profile": [
+    {
+      "id": "1",
+      "image": "https://picsum.photos/id/237/200/300",
+      "isLoggedIn": true
+    }
   ]
 }

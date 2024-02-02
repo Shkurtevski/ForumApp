@@ -6,10 +6,18 @@
   @extend %w-100-h-100;
   background-color: var.$background-color-primary;
   color: var.$text-color-primary;
+  margin-bottom: 1rem;
+  padding-top: 1rem;
   overflow-y: auto;
   .discover-wrapper {
     @extend %wrap;
     .discover-content {
+      .icon-profile-wrapper {
+        @extend %flex-between;
+        img {
+          border-radius: 50%;
+        }
+      }
       .heading-wrapper {
         display: flex;
         h1 {
@@ -55,10 +63,6 @@
         flex-wrap: wrap;
         margin-right: -15px;
         margin-bottom: -15px;
-        a {
-          color: var.$text-color-primary;
-          text-decoration: none;
-        }
         .card {
           width: 100%;
           p {

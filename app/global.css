@@ -23,6 +23,11 @@ ul {
   list-style-type: none;
 }
 
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
 img {
   max-width: 100%;
 }
@@ -48,13 +53,13 @@ p {
   padding: 0.7rem 2rem;
 }
 
-.channel-page .channel-page-wrapper, .discover .discover-wrapper, .banner .wrapper {
+.nav .nav-wrapper, .channel-page .channel-page-wrapper, .discover .discover-wrapper, .banner .wrapper {
   width: 80%;
   margin-left: auto;
   margin-right: auto;
 }
 @media (max-width: 1024px) {
-  .channel-page .channel-page-wrapper, .discover .discover-wrapper, .banner .wrapper {
+  .nav .nav-wrapper, .channel-page .channel-page-wrapper, .discover .discover-wrapper, .banner .wrapper {
     width: 100%;
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
@@ -74,7 +79,7 @@ p {
   background-size: contain;
 }
 
-.discover .discover-wrapper .discover-content .search-wrapper {
+.nav .nav-wrapper ul, .discover .discover-wrapper .discover-content .icon-profile-wrapper, .discover .discover-wrapper .discover-content .search-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -117,6 +122,8 @@ p {
 .discover {
   background-color: #222121;
   color: #fff;
+  margin-bottom: 1rem;
+  padding-top: 1rem;
   overflow-y: auto;
 }
 .discover .discover-wrapper .discover-content .heading-wrapper {
@@ -168,10 +175,6 @@ p {
   margin-right: -15px;
   margin-bottom: -15px;
 }
-.discover .discover-wrapper .discover-content .discover-content-wrapper a {
-  color: #fff;
-  text-decoration: none;
-}
 .discover .discover-wrapper .discover-content .discover-content-wrapper .card {
   width: 100%;
 }
@@ -195,7 +198,7 @@ p {
 .discover .discover-wrapper .discover-content .discover-content-wrapper .card .card-inner img {
   margin-bottom: 0.5rem;
   border-radius: 2rem;
-  border: 0.1rem solid #ececec;
+  border: 0.1rem solid #333333;
 }
 
 .channel-page {
@@ -209,4 +212,18 @@ p {
   margin-bottom: 0;
   font-size: 0.8125rem;
   color: #cacaca;
+}
+
+.nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  background-color: #141414;
+  border-top: 0.1rem solid #333333;
+}
+.nav .nav-wrapper ul {
+  padding: 1rem 1rem;
+  margin-bottom: 0;
 }/*# sourceMappingURL=global.css.map */

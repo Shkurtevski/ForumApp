@@ -17,3 +17,9 @@ export interface CardType {
   description: string;
   image: string;
 }
+
+export interface ProfileType {
+  id: string;
+  image: string;
+  isLoggedIn: boolean;
+}

@@ -1,7 +1,10 @@
 @use "../abstracts/variables" as var;
 @use "sass:math";
 
-
+a {
+  color: var.$text-color-primary;
+  text-decoration: none;
+}
 img {
   max-width: 100%;
 }

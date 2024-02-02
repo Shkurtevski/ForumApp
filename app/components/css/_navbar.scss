@@ -1,0 +1,21 @@
+@use "../../abstracts/variables" as var;
+@use "../../abstracts/mixins" as mix;
+@use "sass:math";
+
+.nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  background-color: var.$background-color-secondary;
+  border-top: 0.1rem solid var.$border-placeholder-color;
+  .nav-wrapper {
+    @extend %wrap;
+    ul {
+      @extend %flex-between;
+      padding: 1rem 1rem;
+      margin-bottom: 0;
+    }
+  }
+}
