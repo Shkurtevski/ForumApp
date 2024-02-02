@@ -11,12 +11,12 @@ async function getCards() {
   return res.json();
 }
 
-
 const DiscoverContent: NextPage = async () => {
   const cards = await getCards();
   return (
     <div className="discover-content">
-      <div className="discover-wrapper">
+      <h1>Discover</h1>
+      <div className="discover-content-wrapper">
         {cards.map((card: CardType) => (
           <Card key={card.id} {...card} />
         ))}

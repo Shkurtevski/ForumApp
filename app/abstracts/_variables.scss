@@ -25,6 +25,7 @@ $font-weight-base:           $font-weight-normal;
 // Size settings
 $gutter-base:                rem-calc(30);
 $border-radius:              0.3rem;
+$card-border-radius:         2rem;
 
 // Text-transform
 $text-transform-uppercase:   uppercase;
@@ -38,4 +39,4 @@ $text-color-yellow:          #FEDC56;
 $background-color-primary:   #222121;
 
 // Border/Placeholder-Colors
-$border-placeholder-color:   #C2C2C2;
+$border-placeholder-color:   #ececec;

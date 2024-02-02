@@ -3,10 +3,37 @@
 @use "sass:math";
 
 .discover {
-  @extend %wrap;
   @extend %w-100-h-100;
   background-color: var.$background-color-primary;
   color: var.$text-color-primary;
-  
-  overflow-y: auto; 
+  overflow-y: auto;
+  .discover-wrapper {
+    @extend %wrap;
+    .discover-content {
+      .discover-content-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: -15px;
+        margin-bottom: -15px;
+        .card {
+          width: 100%;
+          @include mix.custom-tablet-styles {
+            width: 50%;
+          }
+          @include mix.laptop-m-styles {
+            width: 33.333%;
+          }
+          .card-inner {
+            margin-right: 15px;
+            margin-bottom: 15px;
+            img {
+              margin-bottom: 0.5rem;
+              border-radius: var.$card-border-radius;
+              border: 0.1rem solid var.$border-placeholder-color;
+            }
+          }
+        }
+      }
+    }
+  }
 }

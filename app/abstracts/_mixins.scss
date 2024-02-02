@@ -25,6 +25,12 @@
   }
 }
 
+@mixin custom-tablet-styles {
+  @media (min-width: 585px) {
+    @content;
+  }
+}
+
 @mixin mobile-l-styles {
   @media (min-width: 425px) {
     @content;

@@ -1,7 +1,15 @@
 @use "../abstracts/variables" as var;
 @use "sass:math";
 
-
+h1 {
+  margin-bottom: 1rem;
+}
+h2 {
+  margin-bottom: 1rem;
+}
+p {
+  margin-bottom: 1rem;
+}
 .btn-primary {
   border-radius: var.$border-radius;
   color: var.$text-color-secondary;

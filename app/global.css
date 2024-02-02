@@ -23,6 +23,18 @@ ul {
   list-style-type: none;
 }
 
+h1 {
+  margin-bottom: 1rem;
+}
+
+h2 {
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
 .btn-primary {
   border-radius: 0.3rem;
   color: #141414;
@@ -32,13 +44,13 @@ ul {
   padding: 0.7rem 2rem;
 }
 
-.discover, .banner .wrapper {
+.discover .discover-wrapper, .banner .wrapper {
   width: 80%;
   margin-left: auto;
   margin-right: auto;
 }
 @media (max-width: 1024px) {
-  .discover, .banner .wrapper {
+  .discover .discover-wrapper, .banner .wrapper {
     width: 100%;
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
@@ -84,4 +96,32 @@ ul {
   background-color: #222121;
   color: #fff;
   overflow-y: auto;
+}
+.discover .discover-wrapper .discover-content .discover-content-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-bottom: -15px;
+}
+.discover .discover-wrapper .discover-content .discover-content-wrapper .card {
+  width: 100%;
+}
+@media (min-width: 585px) {
+  .discover .discover-wrapper .discover-content .discover-content-wrapper .card {
+    width: 50%;
+  }
+}
+@media (min-width: 1024px) {
+  .discover .discover-wrapper .discover-content .discover-content-wrapper .card {
+    width: 33.333%;
+  }
+}
+.discover .discover-wrapper .discover-content .discover-content-wrapper .card .card-inner {
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+.discover .discover-wrapper .discover-content .discover-content-wrapper .card .card-inner img {
+  margin-bottom: 0.5rem;
+  border-radius: 2rem;
+  border: 0.1rem solid #ececec;
 }/*# sourceMappingURL=global.css.map */

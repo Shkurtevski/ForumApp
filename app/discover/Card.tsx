@@ -7,10 +7,13 @@ const Card: NextPage<CardType> = ({ title, description, image }) => {
     <div className="card">
       <div className="card-inner">
         <Image
-          src={image} // Use the image URL directly
+          src={image}
           alt={title}
-          width={300}
-          height={200}
+          width={600}
+          height={250}
+          quality={100}
+          style={{ objectFit: "cover" }}
+          loading="lazy"
         />
 
         <h2>{title}</h2>

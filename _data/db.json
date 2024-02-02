@@ -4,31 +4,31 @@
       "id": "1",
       "title": "NBPA",
       "description": "Let's play together. Get to know your favorite players and support their journey. Get involved HERE.",
-      "image": "/app_banner.png"
+      "image": "https://picsum.photos/id/102/200/300"
     },
     {
       "id": "2",
       "title": "Adidas",
       "description": "'Home of Classics showcases' showcases how the boundaries of creativity are pushed further when communities come together.",
-      "image": "/app_banner.png"
+      "image": "https://picsum.photos/id/153/200/300"
     },
     {
       "id": "3",
       "title": "CARMEL Music",
       "description": "Get to know Carmel, his story, and support his journey. Vote and get exclusive access.",
-      "image": "/app_banner.png"
+      "image": "https://picsum.photos/id/222/200/300"
     },
     {
       "id": "4",
       "title": "Karate Combat",
       "description": "A one stop shop for creators. Build your empire and connect with your community without switching apps.",
-      "image": "/app_banner.png"
+      "image": "https://picsum.photos/id/198/200/300"
     },
     {
       "id": "5",
       "title": "Swordpay",
       "description": "Let's play together. Get to know your favorite fighters and support their journey. Vote and get rewarded.",
-      "image": "/app_banner.png"
+      "image": "https://picsum.photos/id/17/200/300"
     }
   ]
 }
