@@ -43,7 +43,7 @@ const ChannelPage: NextPage<{ params: DataType }> = async ({ params }) => {
             src={channel.image}
             alt={channel.title}
             width={300}
-            height={100}
+            height={70}
             quality={100}
             style={{ objectFit: "cover" }}
           />

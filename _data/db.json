@@ -17,25 +17,53 @@
       "id": "2",
       "title": "Adidas",
       "description": "'Home of Classics showcases' showcases how the boundaries of creativity are pushed further when communities come together.",
-      "image": "https://picsum.photos/id/153/200/300"
+      "image": "https://picsum.photos/id/153/200/300",
+      "channel": {
+        "id": "adidas_channel_2",
+        "name": "Adidas",
+        "image": "https://picsum.photos/id/153/200/300",
+        "description_one": "Get to know your favorite players",
+        "description_two": "and support their journey..."
+      }
     },
     {
       "id": "3",
       "title": "CARMEL Music",
       "description": "Get to know Carmel, his story, and support his journey. Vote and get exclusive access.",
-      "image": "https://picsum.photos/id/222/200/300"
+      "image": "https://picsum.photos/id/222/200/300",
+      "channel": {
+        "id": "carmel_music_channel_3",
+        "name": "CARMEL Music",
+        "image": "https://picsum.photos/id/222/200/300",
+        "description_one": "Get to know your favorite players",
+        "description_two": "and support their journey..."
+      }
     },
     {
       "id": "4",
       "title": "Karate Combat",
       "description": "A one stop shop for creators. Build your empire and connect with your community without switching apps.",
-      "image": "https://picsum.photos/id/198/200/300"
+      "image": "https://picsum.photos/id/198/200/300",
+      "channel": {
+        "id": "karate_combat_channel_4",
+        "name": "Karate Combat",
+        "image": "https://picsum.photos/id/198/200/300",
+        "description_one": "Get to know your favorite players",
+        "description_two": "and support their journey..."
+      }
     },
     {
       "id": "5",
       "title": "Swordpay",
       "description": "Let's play together. Get to know your favorite fighters and support their journey. Vote and get rewarded.",
-      "image": "https://picsum.photos/id/17/200/300"
+      "image": "https://picsum.photos/id/17/200/300",
+      "channel": {
+        "id": "swordpay_channel_5",
+        "name": "Swordpay",
+        "image": "https://picsum.photos/id/17/200/300",
+        "description_one": "Get to know your favorite players",
+        "description_two": "and support their journey..."
+      }
     }
   ]
 }

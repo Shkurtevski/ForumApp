@@ -168,8 +168,15 @@ p {
   margin-right: -15px;
   margin-bottom: -15px;
 }
+.discover .discover-wrapper .discover-content .discover-content-wrapper a {
+  color: #fff;
+  text-decoration: none;
+}
 .discover .discover-wrapper .discover-content .discover-content-wrapper .card {
   width: 100%;
+}
+.discover .discover-wrapper .discover-content .discover-content-wrapper .card p {
+  color: #cacaca;
 }
 @media (min-width: 585px) {
   .discover .discover-wrapper .discover-content .discover-content-wrapper .card {

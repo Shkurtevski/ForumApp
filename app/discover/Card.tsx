@@ -10,7 +10,7 @@ const Card: NextPage<CardType> = ({ title, description, image }) => {
           src={image}
           alt={title}
           width={600}
-          height={250}
+          height={230}
           quality={100}
           style={{ objectFit: "cover" }}
           loading="lazy"
