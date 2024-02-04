@@ -10,6 +10,8 @@
   z-index: 999;
   background-color: var.$background-color-secondary;
   border-top: 0.1rem solid var.$border-placeholder-color;
+  color: var.$text-color-primary;
+  &
   .nav-wrapper {
     @extend %wrap;
     ul {
@@ -19,3 +21,7 @@
     }
   }
 }
+
+.active {
+    color: var.$text-color-yellow;
+  }

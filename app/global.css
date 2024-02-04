@@ -51,6 +51,7 @@ p {
   font-weight: 700;
   border: none;
   padding: 0.7rem 2rem;
+  cursor: pointer;
 }
 
 .nav .nav-wrapper, .channel-page .channel-page-wrapper, .discover .discover-wrapper, .banner .wrapper {
@@ -72,11 +73,9 @@ p {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-}
-
-.channel-page {
-  background-position: center;
-  background-size: contain;
+  z-index: 123123123;
+  position: fixed;
+  width: 100%;
 }
 
 .nav .nav-wrapper ul, .discover .discover-wrapper .discover-content .icon-profile-wrapper, .discover .discover-wrapper .discover-content .search-wrapper {
@@ -122,9 +121,12 @@ p {
 .discover {
   background-color: #222121;
   color: #fff;
-  margin-bottom: 1rem;
+  padding-bottom: calc(61px + 1rem);
   padding-top: 1rem;
   overflow-y: auto;
+}
+.discover .discover-wrapper .discover-content .icon-profile-wrapper img {
+  border-radius: 50%;
 }
 .discover .discover-wrapper .discover-content .heading-wrapper {
   display: flex;
@@ -202,8 +204,8 @@ p {
 }
 
 .channel-page {
-  background-image: url("../../images/channel_background.jpg");
   color: #fff;
+  background-color: #222121;
 }
 .channel-page .channel-page-wrapper .channel-page-content-two img {
   margin-bottom: 0.5rem;
@@ -222,8 +224,13 @@ p {
   z-index: 999;
   background-color: #141414;
   border-top: 0.1rem solid #333333;
+  color: #fff;
 }
 .nav .nav-wrapper ul {
   padding: 1rem 1rem;
   margin-bottom: 0;
+}
+
+.active {
+  color: #FEDC56;
 }/*# sourceMappingURL=global.css.map */

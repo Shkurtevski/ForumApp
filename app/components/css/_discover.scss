@@ -6,7 +6,7 @@
   @extend %w-100-h-100;
   background-color: var.$background-color-primary;
   color: var.$text-color-primary;
-  margin-bottom: 1rem;
+  padding-bottom: calc(61px + 1rem);
   padding-top: 1rem;
   overflow-y: auto;
   .discover-wrapper {

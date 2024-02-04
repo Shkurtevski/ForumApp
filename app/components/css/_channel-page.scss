@@ -3,9 +3,8 @@
 @use "sass:math";
 
 .channel-page {
-  @extend %channel-background-image-setup;
-  background-image: url("../../images/channel_background.jpg");
   color: var.$text-color-primary;
+  background-color: var.$background-color-primary;
   .channel-page-wrapper {
     @extend %wrap;
     @extend %flex-between-column;

@@ -3,6 +3,7 @@ import React from "react";
 import { notFound } from "next/navigation";
 import { DataType } from "@/app/interfaces";
 import Image from "next/image";
+import CustomNavbar from "@/app/components/CustomNavbar";
 
 export const metadata: { title: string } = {
   title: "Channel",
@@ -52,6 +53,7 @@ const ChannelPage: NextPage<{ params: DataType }> = async ({ params }) => {
           <p>{channel.description_two}</p>
         </div>
       </div>
+      <CustomNavbar showHomeIcon showCirclesRelationIcon />
     </main>
   );
 };
