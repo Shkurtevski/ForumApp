@@ -1,6 +1,6 @@
 import { NextPage } from "next";
 import DiscoverContent from "./DiscoverContent";
-import CustomNavbar from "../components/CustomNavbar";
+import CustomNavbar from "@/app/components/CustomNavbar";
 
 export const metadata: { title: string } = {
   title: "Discover",
