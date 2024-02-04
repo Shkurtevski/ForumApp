@@ -6,23 +6,22 @@
   color: var.$text-color-primary;
   background-color: var.$background-color-primary;
   padding-bottom: calc(61px + 1rem);
-  .channel-page-wrapper {
+  .channel-page-container {
     @extend %wrap;
-    @extend %w-100-h-100;
-    overflow-y: auto;
-    .channel-page-content-two {
-      @extend %flex-center-column;
-      img {
-        margin-bottom: 0.5rem;
+    .channel-page-wrapper {
+      @extend %w-100-h-100;
+      overflow-y: auto;
+      .channel-page-content-two {
+        @extend %flex-center-column;
+        img {
+          margin-bottom: 0.5rem;
+        }
+        p {
+          margin-bottom: 0;
+          font-size: var.$font-size-small;
+          color: var.$text-color-gray;
+        }
       }
-      p {
-        margin-bottom: 0;
-        font-size: var.$font-size-small;
-        color: var.$text-color-gray;
-      }
-    }
-    .icon-profile-wrapper {
-      @extend %wrap;
     }
   }
 }

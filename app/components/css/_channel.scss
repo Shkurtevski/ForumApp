@@ -5,7 +5,6 @@
 .channel-card-container {
   display: flex;
   flex-wrap: wrap;
-  @extend %wrap;
   .channel {
     width: 100%;
     border: 1px solid var.$border-placeholder-color;

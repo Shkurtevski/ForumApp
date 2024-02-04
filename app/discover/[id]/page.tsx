@@ -42,27 +42,29 @@ const ChannelPage: NextPage<{ params: DataType }> = async ({ params }) => {
 
   return (
     <main className="channel-page">
-      <div className="channel-page-wrapper">
-        <XmarkProfileImg />
-        <div className="channel-page-content-one">
-          <Channels />
+      <div className="channel-page-container">
+        <div className="channel-page-wrapper">
+          <XmarkProfileImg />
+          <div className="channel-page-content-one">
+            <Channels />
+          </div>
+          <div className="channel-page-content-two">
+            <h2>{channel.name}</h2>
+            <Image
+              src={channel.image}
+              alt={channel.name}
+              width={300}
+              height={70}
+              quality={100}
+              priority
+              style={{ objectFit: "cover" }}
+            />
+            <p>{channel.description_one}</p>
+            <p>{channel.description_two}</p>
+          </div>
         </div>
-        <div className="channel-page-content-two">
-          <h2>{channel.name}</h2>
-          <Image
-            src={channel.image}
-            alt={channel.name}
-            width={300}
-            height={70}
-            quality={100}
-            priority
-            style={{ objectFit: "cover" }}
-          />
-          <p>{channel.description_one}</p>
-          <p>{channel.description_two}</p>
-        </div>
+        <CustomNavbar showHomeIcon showCirclesRelationIcon />
       </div>
-      <CustomNavbar showHomeIcon showCirclesRelationIcon />
     </main>
   );
 };
