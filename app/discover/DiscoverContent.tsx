@@ -10,7 +10,7 @@ import Link from "next/link";
 import XmarkProfileImg from "./XmarkProfileImg";
 
 async function getCards() {
-  const res = await fetch("https://forum-app-jy7g.onrender.com/discover", {
+  const res = await fetch("http://localhost:4000/discover", {
     next: {
       revalidate: 0,
     },
