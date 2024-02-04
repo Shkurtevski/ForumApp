@@ -5,7 +5,7 @@ import { ProfileType } from "../interfaces";
 import { NextPage } from "next";
 
 async function getProfile() {
-  const res = await fetch("http://localhost:4000/profile", {
+  const res = await fetch("https://forum-app-z6fe.onrender.com/profile", {
     next: {
       revalidate: 0,
     },
