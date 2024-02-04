@@ -40,6 +40,7 @@ const CustomNavbar: NextPage<CustomNavbarProps> = ({
           ) : (
             <FaLocationDot key={3} size={25} />
           ),
+
           <IoStatsChart key={4} size={25} />,
           <CgProfile key={5} size={25} />,
         ]}

@@ -1,4 +1,5 @@
 @use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
 @use "sass:math";
 
 a {
@@ -14,6 +15,9 @@ h1 {
 h2 {
   margin-bottom: 1rem;
 }
+h4 {
+  margin-bottom: 0.5rem;
+}
 p {
   margin-bottom: 1rem;
 }
@@ -25,4 +29,11 @@ p {
   border: none;
   padding: 0.7rem 2rem;
   cursor: pointer;
+  @include mix.laptop-m-styles {
+    &:hover {
+      background-color: var.$background-color-secondary;
+      color: var.$text-color-primary;
+      transition: var.$transition;
+    }
+  }
 }

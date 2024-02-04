@@ -1,0 +1,12 @@
+@use "../../abstracts/variables" as var;
+@use "../../abstracts/mixins" as mix;
+@use "sass:math";
+
+.icon-profile-wrapper {
+  margin-bottom: 1rem;
+  padding-top: 1rem;
+  @extend %flex-between;
+  img {
+    border-radius: 50%;
+  }
+}

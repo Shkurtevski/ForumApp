@@ -23,3 +23,9 @@ export interface ProfileType {
   image: string;
   isLoggedIn: boolean;
 }
+
+export interface ChannelType {
+  image: string;
+  title: string;
+  description: string;
+}

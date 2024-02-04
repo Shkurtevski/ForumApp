@@ -4,6 +4,8 @@ import { notFound } from "next/navigation";
 import { DataType } from "@/app/interfaces";
 import Image from "next/image";
 import CustomNavbar from "@/app/components/CustomNavbar";
+import Channels from "./Channels";
+import XmarkProfileImg from "../XmarkProfileImg";
 
 export const metadata: { title: string } = {
   title: "Channel",
@@ -38,6 +40,10 @@ const ChannelPage: NextPage<{ params: DataType }> = async ({ params }) => {
   return (
     <main className="channel-page">
       <div className="channel-page-wrapper">
+        <XmarkProfileImg />
+        <div className="channel-page-content-one">
+          <Channels />
+        </div>
         <div className="channel-page-content-two">
           <h2>{channel.name}</h2>
           <Image
