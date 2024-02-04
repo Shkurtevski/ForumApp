@@ -1,4 +1,4 @@
-"use client"
+// "use client"
 import { NextPage } from "next";
 import Link from "next/link";
 // import AnimationSpinner from "./components/AnimationSpinner";
