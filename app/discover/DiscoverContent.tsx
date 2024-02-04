@@ -1,6 +1,6 @@
 import { NextPage } from "next";
 import Card from "../components/Card";
-import { CardType, ProfileType } from "../interfaces";
+import { CardType} from "../interfaces";
 
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoIosArrowDown } from "react-icons/io";
@@ -10,7 +10,7 @@ import Link from "next/link";
 import XmarkProfileImg from "./XmarkProfileImg";
 
 async function getCards() {
-  const res = await fetch("http://localhost:4000/discover", {
+  const res = await fetch("https://forum-app-jy7g.onrender.com/discover", {
     next: {
       revalidate: 0,
     },

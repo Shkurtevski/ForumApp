@@ -12,7 +12,7 @@ export const metadata: { title: string } = {
 };
 
 export async function generateStaticParams() {
-  const res = await fetch(`http://localhost:4000/discover`);
+  const res = await fetch(`https://forum-app-jy7g.onrender.com/discover`);
 
   const data = await res.json();
 
@@ -22,11 +22,14 @@ export async function generateStaticParams() {
 }
 
 async function getDataType(id: string) {
-  const res = await fetch(`http://localhost:4000/discover/${id}`, {
-    next: {
-      revalidate: 60,
-    },
-  });
+  const res = await fetch(
+    `https://forum-app-jy7g.onrender.com/discover/${id}`,
+    {
+      next: {
+        revalidate: 60,
+      },
+    }
+  );
 
   if (!res.ok) {
     notFound();
