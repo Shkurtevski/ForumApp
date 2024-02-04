@@ -207,7 +207,7 @@ p {
 .discover .discover-wrapper .discover-content .discover-content-wrapper .card .card-inner img {
   margin-bottom: 0.5rem;
   border-radius: 2rem;
-  border: 0.1rem solid #333333;
+  border: 0.1rem solid #727272;
 }
 
 .channel-page {
@@ -234,7 +234,7 @@ p {
   width: 100%;
   z-index: 999;
   background-color: #141414;
-  border-top: 0.1rem solid #333333;
+  border-top: 0.1rem solid #727272;
   color: #fff;
 }
 .nav .nav-wrapper ul {
@@ -252,7 +252,7 @@ p {
 }
 .channel-card-container .channel {
   width: 100%;
-  border: 1px solid #333333;
+  border: 1px solid #727272;
   border-radius: 0.8rem;
   background-color: #141414;
   padding: 0.5rem 1rem;
