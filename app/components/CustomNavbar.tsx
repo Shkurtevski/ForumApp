@@ -13,7 +13,6 @@ interface CustomNavbarProps {
   showHomeIcon?: boolean;
   showCirclesRelationIcon?: boolean;
 }
-
 const CustomNavbar: NextPage<CustomNavbarProps> = ({
   showHomeIcon,
   showCirclesRelationIcon,

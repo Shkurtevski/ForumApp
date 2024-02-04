@@ -3,7 +3,7 @@ import React from "react";
 import { notFound } from "next/navigation";
 import { DataType } from "@/app/interfaces";
 import Image from "next/image";
-import CustomNavbar from "@/app/components/CustomNavbar";
+import CustomNavbar from "../../components/CustomNavbar";
 import Channels from "./Channels";
 import XmarkProfileImg from "../XmarkProfileImg";
 
