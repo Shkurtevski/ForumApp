@@ -4,8 +4,8 @@ import { notFound } from "next/navigation";
 import { DataType } from "@/app/interfaces";
 import Image from "next/image";
 import CustomNavbar from "../../components/CustomNavbar";
-import Channels from "./Channels";
-import XmarkProfileImg from "../XmarkProfileImg";
+import Channels from "./sub-components/Channels";
+import XmarkProfileImg from "../sub-components/XmarkProfileImg";
 
 export const metadata: { title: string } = {
   title: "Channel",

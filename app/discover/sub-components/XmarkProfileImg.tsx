@@ -1,7 +1,7 @@
 import React from "react";
 import { HiMiniXMark } from "react-icons/hi2";
 import Image from "next/image";
-import { ProfileType } from "../interfaces";
+import { ProfileType } from "../../interfaces";
 import { NextPage } from "next";
 
 async function getProfile() {
