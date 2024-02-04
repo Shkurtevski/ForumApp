@@ -1,6 +1,6 @@
 import { NextPage } from "next";
 import React from "react";
-import Navbar from "@/app/components/Navbar";
+import Navbar from "./Navbar";
 import { MdLocalPostOffice } from "react-icons/md";
 import { FaLocationDot } from "react-icons/fa6";
 import { IoStatsChart } from "react-icons/io5";
