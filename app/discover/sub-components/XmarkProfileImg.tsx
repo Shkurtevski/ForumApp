@@ -1,5 +1,6 @@
 import React from "react";
-import { HiMiniXMark } from "react-icons/hi2";
+
+import { FaCircleXmark } from "react-icons/fa6";
 import Image from "next/image";
 import { ProfileType } from "../../interfaces";
 import { NextPage } from "next";
@@ -23,7 +24,7 @@ const XmarkProfileImg: NextPage = async () => {
 
   return (
     <div className="icon-profile-wrapper">
-      <HiMiniXMark size={28} />
+      <FaCircleXmark size={20} />
       <Image
         src={loggedInProfile.image}
         alt={loggedInProfile.id}
