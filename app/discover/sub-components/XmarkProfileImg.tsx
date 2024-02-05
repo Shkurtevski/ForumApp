@@ -1,12 +1,11 @@
 import React from "react";
-
 import { FaCircleXmark } from "react-icons/fa6";
 import Image from "next/image";
-import { ProfileType } from "../../interfaces";
+import { UserType } from "../../interfaces";
 import { NextPage } from "next";
 
-async function getProfile() {
-  const res = await fetch("https://forum-app-z6fe.onrender.com/profile", {
+async function getUser() {
+  const res = await fetch("https://forum-app-z6fe.onrender.com/users", {
     next: {
       revalidate: 0,
     },
@@ -15,10 +14,10 @@ async function getProfile() {
 }
 
 const XmarkProfileImg: NextPage = async () => {
-  const profiles: ProfileType[] = await getProfile();
-  const loggedInProfile = profiles.find((profile) => profile.isLoggedIn);
+  const users: UserType[] = await getUser();
+  const loggedInUser = users.find((user) => user.isLoggedIn);
 
-  if (!loggedInProfile) {
+  if (!loggedInUser) {
     return <div>No logged-in profile found</div>;
   }
 
@@ -26,8 +25,8 @@ const XmarkProfileImg: NextPage = async () => {
     <div className="icon-profile-wrapper">
       <FaCircleXmark size={20} />
       <Image
-        src={loggedInProfile.image}
-        alt={loggedInProfile.id}
+        src={loggedInUser.image}
+        alt={loggedInUser.id}
         width={60}
         height={60}
       />

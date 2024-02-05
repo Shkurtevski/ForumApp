@@ -4,6 +4,16 @@
 
 form {
   width: 100%;
+  .text-content-group {
+    padding-top: 1rem;
+    h3 {
+      text-align: center;
+      text-transform: uppercase;
+    }
+    p {
+      font-size: var.$font-size-small;
+    }
+  }
   .form-group-custom {
     display: flex;
     margin-bottom: 1rem;
@@ -30,10 +40,55 @@ form {
     padding: 0 0.5rem;
     height: 33px;
   }
+  label {
+    font-size: var.$font-size-small;
+  }
   .form-group-wrapper {
     display: flex;
-    .form-group {
-      
+    justify-content: space-between;
+
+    .form-group-checkboxes {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 60%;
+      margin-right: 0.5rem;
+      margin-bottom: 1rem;
     }
+    .form-group-file {
+      @extend %flex-center;
+      width: 40%;
+      height: 100px;
+      border: 1px solid var.$text-color-yellow;
+      border-radius: var.$border-radius;
+      text-align: center;
+
+      #photo {
+        display: none;
+      }
+      .form-group-file-wrapper {
+        @extend %flex-center;
+        flex-direction: column;
+        padding: 0.5rem;
+      }
+    }
+  }
+  .terms-group {
+    margin-bottom: 1rem;
+    p {
+      font-size: var.$font-size-small;
+      font-weight: var.$font-weight-bold;
+      margin-bottom: 0.5rem;
+    }
+    .terms-wrapper {
+      display: flex;
+      align-items: center;
+      input {
+        margin-right: 0.5rem;
+      }
+    }
+  }
+  button {
+    text-transform: uppercase;
   }
 }

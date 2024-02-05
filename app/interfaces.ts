@@ -31,7 +31,7 @@ export interface CardType {
   image: string;
 }
 
-export interface ProfileType {
+export interface UserType {
   id: string;
   image: string;
   isLoggedIn: boolean;
@@ -49,4 +49,5 @@ export interface RegistrationFormType {
   email: string;
   number: number;
   profilePhoto: string;
+  socialMedia: boolean;
 }

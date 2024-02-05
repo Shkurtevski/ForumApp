@@ -60,6 +60,12 @@ ul {
   flex-direction: column;
 }
 
+form .form-group-wrapper .form-group-file, form .form-group-wrapper .form-group-file .form-group-file-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .channel-page .channel-page-container .channel-page-wrapper .channel-page-content-two {
   display: flex;
   justify-content: center;
@@ -99,6 +105,10 @@ h4 {
 
 p {
   margin-bottom: 1rem;
+}
+
+.btn-100 {
+  width: 100%;
 }
 
 .btn-primary {
@@ -316,6 +326,16 @@ p {
 form {
   width: 100%;
 }
+form .text-content-group {
+  padding-top: 1rem;
+}
+form .text-content-group h3 {
+  text-align: center;
+  text-transform: uppercase;
+}
+form .text-content-group p {
+  font-size: 0.8125rem;
+}
 form .form-group-custom {
   display: flex;
   margin-bottom: 1rem;
@@ -342,6 +362,50 @@ form input {
   padding: 0 0.5rem;
   height: 33px;
 }
+form label {
+  font-size: 0.8125rem;
+}
 form .form-group-wrapper {
   display: flex;
+  justify-content: space-between;
+}
+form .form-group-wrapper .form-group-checkboxes {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 60%;
+  margin-right: 0.5rem;
+  margin-bottom: 1rem;
+}
+form .form-group-wrapper .form-group-file {
+  width: 40%;
+  height: 100px;
+  border: 1px solid #FEDC56;
+  border-radius: 0.8rem;
+  text-align: center;
+}
+form .form-group-wrapper .form-group-file #photo {
+  display: none;
+}
+form .form-group-wrapper .form-group-file .form-group-file-wrapper {
+  flex-direction: column;
+  padding: 0.5rem;
+}
+form .terms-group {
+  margin-bottom: 1rem;
+}
+form .terms-group p {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+form .terms-group .terms-wrapper {
+  display: flex;
+  align-items: center;
+}
+form .terms-group .terms-wrapper input {
+  margin-right: 0.5rem;
+}
+form button {
+  text-transform: uppercase;
 }/*# sourceMappingURL=global.css.map */

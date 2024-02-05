@@ -1,7 +1,7 @@
 import { NextPage } from "next";
 import DiscoverContent from "./sub-components/DiscoverContent";
 import CustomNavbar from "../components/navbar/CustomNavbar";
-import { PageMetadata } from "../interfaces";
+import { PageMetadata, UserType } from "../interfaces";
 import RegistrationForm from "../components/forms/RegistrationForm";
 
 export const metadata: PageMetadata = {
@@ -17,20 +17,33 @@ export const metadata: PageMetadata = {
   ogType: "website",
 };
 
-const Discover: NextPage = () => {
-  return (
-    <main className="discover">
+async function getUser() {
+  const res = await fetch("https://forum-app-z6fe.onrender.com/users", {
+    next: {
+      revalidate: 0,
+    },
+  });
+  return res.json();
+}
+
+const Discover: NextPage = async () => {
+  const users: UserType[] = await getUser();
+  const loggedInUser = users.find((user) => user.isLoggedIn);
+
+  let modalWindow = null;
+  if (!loggedInUser) {
+    modalWindow = (
       <div className="modal-window">
         <div className="modal-window-wrapper">
-          <RegistrationForm
-            name={""}
-            surname={""}
-            email={""}
-            number={0}
-            profilePhoto={""}
-          />
+          <RegistrationForm />
         </div>
       </div>
+    );
+  }
+
+  return (
+    <main className="discover">
+      {modalWindow}
       <div className="discover-wrapper">
         <DiscoverContent />
         <CustomNavbar />
