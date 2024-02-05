@@ -1,3 +1,16 @@
+export interface PageMetadata {
+  title: string;
+  description: string;
+  keywords: string[];
+  author: string;
+  robots: string;
+  ogTitle: string;
+  ogDescription: string;
+  ogImage: string;
+  ogUrl: string;
+  ogType: string;
+}
+
 export interface DataType {
   id: string;
   title: string;
@@ -28,4 +41,12 @@ export interface ChannelType {
   image: string;
   title: string;
   description: string;
+}
+
+export interface RegistrationFormType {
+  name: string;
+  surname: string;
+  email: string;
+  number: number;
+  profilePhoto: string;
 }

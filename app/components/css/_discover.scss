@@ -6,6 +6,15 @@
   background-color: var.$background-color-primary;
   color: var.$text-color-primary;
   padding-bottom: calc(61px + 1rem);
+  .modal-window {
+    width: 100%;
+    height: 100vh;
+    background-color: var.$background-color-primary;
+    position: fixed;
+    .modal-window-wrapper {
+      @extend %wrap;
+    }
+  }
   .discover-wrapper {
     @extend %wrap;
     .discover-content {

@@ -1,0 +1,39 @@
+@use "../../abstracts/variables" as var;
+@use "../../abstracts/mixins" as mix;
+@use "sass:math";
+
+form {
+  width: 100%;
+  .form-group-custom {
+    display: flex;
+    margin-bottom: 1rem;
+    #name {
+      width: 40%;
+      margin-right: 1rem;
+    }
+    #surname {
+      width: 60%;
+    }
+  }
+  .form-group-custom-one {
+    display: flex;
+    flex-direction: column;
+    input {
+      margin-bottom: 1rem;
+    }
+  }
+  input {
+    outline: none;
+    background-color: var.$background-color-secondary;
+    border: 1px solid var.$border-placeholder-color;
+    color: var.$border-placeholder-color;
+    padding: 0 0.5rem;
+    height: 33px;
+  }
+  .form-group-wrapper {
+    display: flex;
+    .form-group {
+      
+    }
+  }
+}

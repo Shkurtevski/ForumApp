@@ -3,12 +3,22 @@ import React from "react";
 import { notFound } from "next/navigation";
 import { DataType } from "@/app/interfaces";
 import Image from "next/image";
-import CustomNavbar from "../../components/CustomNavbar";
+import CustomNavbar from "../../components/navbar/CustomNavbar";
 import Channels from "./sub-components/Channels";
 import XmarkProfileImg from "../sub-components/XmarkProfileImg";
+import { PageMetadata } from "@/app/interfaces";
 
-export const metadata: { title: string } = {
+export const metadata: PageMetadata = {
   title: "Channel",
+  description: "Explore channels",
+  keywords: ["channel", "community"],
+  author: "Your Name",
+  robots: "index, follow",
+  ogTitle: "Channel - Forum App",
+  ogDescription: "Explore channels in the community app",
+  ogImage: "https://example.com/og-image.jpg",
+  ogUrl: "https://example.com/channel",
+  ogType: "website",
 };
 
 export async function generateStaticParams() {

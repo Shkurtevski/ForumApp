@@ -1,6 +1,6 @@
 import { NextPage } from "next";
 import Image from "next/image";
-import { CardType } from "../interfaces";
+import { CardType } from "../../interfaces";
 
 const Card: NextPage<CardType> = ({ title, description, image }) => {
   return (

@@ -1,5 +1,5 @@
 import { NextPage } from "next";
-import Card from "../../components/Card";
+import Card from "../../components/sub-components/Card";
 import { CardType } from "../../interfaces";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoIosArrowDown } from "react-icons/io";
