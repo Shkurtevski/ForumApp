@@ -10,9 +10,9 @@
     @extend %flex-between-column;
     @extend %w-100-h-100;
     text-align: center;
-    padding: 2rem 0;
+    padding: 7rem 0;
     h3 {
-      padding-top: 2rem;
+      
       color: var.$text-color-primary;
       span {
         color: var.$text-color-yellow;

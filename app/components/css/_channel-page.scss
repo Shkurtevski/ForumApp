@@ -9,8 +9,6 @@
   .channel-page-container {
     @extend %wrap;
     .channel-page-wrapper {
-      @extend %w-100-h-100;
-      overflow-y: auto;
       .channel-page-content-two {
         @extend %flex-center-column;
         img {

@@ -11,14 +11,14 @@ const Channel: NextPage<ChannelType> = ({ image, title, description }) => {
           <Image
             src={image}
             alt={title}
-            width={110}
-            height={110}
+            width={90}
+            height={90}
             quality={100}
           />
         </div>
         <div className="channel-content-two">
-          <h4>{title}</h4>
-          <p>{description}</p>
+          <p className="title">{title}</p>
+          <p className="description">{description}</p>
         </div>
       </div>
     </div>

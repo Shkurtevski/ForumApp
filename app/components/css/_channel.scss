@@ -11,7 +11,7 @@
     border-radius: var.$border-radius;
     background-color: var.$background-color-secondary;
     padding: 0.5rem 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 15px;
     @include mix.tablet-styles {
       width: 50%;
     }
@@ -40,8 +40,14 @@
       }
       .channel-content-two {
         width: 60%;
-        h4 {
+        .title {
           text-transform: uppercase;
+          margin-bottom: 0.5rem;
+          color: var.$text-color-yellow;
+          font-weight: var.$font-weight-bold;
+        }
+        .description {
+          margin-bottom: 0;
         }
       }
     }
