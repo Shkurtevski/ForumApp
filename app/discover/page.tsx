@@ -17,6 +17,7 @@ export const metadata: PageMetadata = {
   ogType: "website",
 };
 
+//commit
 async function getUser() {
   const res = await fetch("https://forum-app-z6fe.onrender.com/users", {
     next: {
