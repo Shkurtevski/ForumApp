@@ -31,15 +31,15 @@ const Discover: NextPage = async () => {
   const loggedInUser = users.find((user) => user.isLoggedIn);
 
   let modalWindow = null;
-  if (!loggedInUser) {
-    modalWindow = (
-      <div className="modal-window">
-        <div className="modal-window-wrapper">
-          <RegistrationForm />
-        </div>
+  // if (!loggedInUser) {
+  modalWindow = (
+    <div className="modal-window">
+      <div className="modal-window-wrapper">
+        <RegistrationForm />
       </div>
-    );
-  }
+    </div>
+  );
+  // }
 
   return (
     <main className="discover">

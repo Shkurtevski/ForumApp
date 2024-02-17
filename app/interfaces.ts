@@ -33,6 +33,10 @@ export interface CardType {
 
 export interface UserType {
   id: string;
+  name: string;
+  surname: string;
+  email: string;
+  number: number;
   image: string;
   isLoggedIn: boolean;
 }
@@ -44,10 +48,11 @@ export interface ChannelType {
 }
 
 export interface RegistrationFormType {
+  id: string;
   name: string;
   surname: string;
   email: string;
   number: number;
-  profilePhoto: string;
+  image: string;
   socialMedia: boolean;
 }

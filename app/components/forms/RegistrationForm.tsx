@@ -1,23 +1,86 @@
+"use client";
 import { NextPage } from "next";
+import { useState } from "react";
 import { RegistrationFormType } from "../../interfaces";
 import { RiFileUploadLine } from "react-icons/ri";
 import { FaCircleXmark } from "react-icons/fa6";
+import { v4 as uuidv4 } from "uuid";
 
 const RegistrationForm: NextPage = () => {
+  const [formData, setFormData] = useState<RegistrationFormType>({
+    id: "",
+    name: "",
+    surname: "",
+    email: "",
+    number: 0,
+    image: "",
+    socialMedia: false,
+  });
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value, type, checked } = e.target;
+    setFormData((prevState) => ({
+      ...prevState,
+      [name]: type === "checkbox" ? checked : value,
+    }));
+  };
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    if (!formData.name || !formData.surname || !formData.email) {
+      alert("please fill in all required fields");
+    }
+
+    if (!isValidEmail(formData.email)) {
+      alert("Please enter a valid email address.");
+      return;
+    }
+
+    if (formData.number && !isValidPhoneNumber(formData.number)) {
+      alert("Please enter a valid phone number.");
+      return;
+    }
+
+    const newUser = { ...formData, id: uuidv4() };
+    console.log("Form submitted:", newUser);
+  };
+
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <div className="text-content-group">
         <FaCircleXmark size={20} />
         <h3>sign up</h3>
         <p>register</p>
       </div>
       <div className="form-group-custom">
-        <input type="text" name="name" id="name" placeholder="Katie" />
-        <input type="text" name="surname" id="surname" placeholder="Shaw" />
+        <input
+          type="text"
+          name="name"
+          id="name"
+          placeholder="Katie"
+          value={formData.name}
+          onChange={handleInputChange}
+        />
+        <input
+          type="text"
+          name="surname"
+          id="surname"
+          placeholder="Shaw"
+          value={formData.surname}
+          onChange={handleInputChange}
+        />
       </div>
       <div className="form-group-custom-one">
-        <input type="email" name="email" id="email" placeholder="katieshaw@gmail.com"/>
-        <input type="tel" name="tel" id="tel" placeholder="+44 7911 123456"/>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="katieshaw@gmail.com"
+          value={formData.email}
+          onChange={handleInputChange}
+        />
+        <input type="tel" name="tel" id="tel" placeholder="+44 7911 123456" />
       </div>
       <div className="form-group-wrapper">
         <div className="form-group-checkboxes">
@@ -51,7 +114,9 @@ const RegistrationForm: NextPage = () => {
           </small>
         </div>
       </div>
-      <button className="btn-primary btn-100">join</button>
+      <button type="submit" className="btn-primary btn-100">
+        join
+      </button>
     </form>
   );
 };
