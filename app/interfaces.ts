@@ -54,5 +54,4 @@ export interface RegistrationFormType {
   email: string;
   number: string;
   image: string;
-  socialMedia: boolean;
 }

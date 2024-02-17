@@ -1,7 +1,7 @@
 "use client";
 import { NextPage } from "next";
-import { useState } from "react";
-import { RegistrationFormType } from "../../interfaces";
+import { useState, useEffect } from "react";
+import { RegistrationFormType, UserType } from "../../interfaces";
 import { RiFileUploadLine } from "react-icons/ri";
 import { FaCircleXmark } from "react-icons/fa6";
 import { v4 as uuidv4 } from "uuid";
@@ -14,8 +14,31 @@ const RegistrationForm: NextPage = () => {
     email: "",
     number: "",
     image: "",
-    socialMedia: false,
   });
+
+  const [registeredEmails, setRegisteredEmails] = useState<string[]>([]);
+
+  useEffect(() => {
+    getRegisteredEmails();
+  }, []);
+
+  useEffect(() => {
+    console.log("Registered emails:", registeredEmails);
+  }, [registeredEmails]);
+
+  const getRegisteredEmails = async () => {
+    try {
+      const res = await fetch("https://forum-app-z6fe.onrender.com/users");
+      const data = await res.json();
+      const emails = data.map((user: UserType) => user.email);
+      setRegisteredEmails(emails);
+    } catch (error: any) {
+      console.error("Error fetching users:", error);
+    }
+  };
+
+  console.log("Registered emails:", registeredEmails);
+
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value, type, checked } = e.target;
@@ -38,9 +61,16 @@ const RegistrationForm: NextPage = () => {
       return;
     }
 
+    if (registeredEmails.includes(formData.email)) {
+      alert(
+        "User with this email address already exists. Please use a different email address."
+      );
+      return;
+    }
+
     try {
       const newUser = { ...formData, id: uuidv4() };
-      const res = await fetch(process.env.USERS_API_URL || "", {
+      const res = await fetch("https://forum-app-z6fe.onrender.com/users", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -62,7 +92,6 @@ const RegistrationForm: NextPage = () => {
         email: "",
         number: "",
         image: "",
-        socialMedia: false,
       });
     } catch (error: any) {
       console.error("Error submitting form:", error);
