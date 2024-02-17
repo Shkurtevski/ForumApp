@@ -12,7 +12,7 @@ const RegistrationForm: NextPage = () => {
     name: "",
     surname: "",
     email: "",
-    number: 0,
+    number: "",
     image: "",
     socialMedia: false,
   });
@@ -20,19 +20,18 @@ const RegistrationForm: NextPage = () => {
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value, type, checked } = e.target;
 
-    let newValue: string | number | boolean;
-
-    if (type === "checkbox") {
-      newValue = checked;
-    } else if (name === "number") {
-      newValue = /^\d*$/.test(value) ? parseInt(value, 10) : "";
-    } else {
-      newValue = value;
+    // Validate phone number format
+    if (name === "number") {
+      if (!isValidPhoneNumber(value)) {
+        // You can show an error message or take other actions
+        console.log("Invalid phone number format");
+        return;
+      }
     }
 
     setFormData((prevState) => ({
       ...prevState,
-      [name]: newValue,
+      [name]: type === "checkbox" ? checked : value,
     }));
   };
 
@@ -48,25 +47,19 @@ const RegistrationForm: NextPage = () => {
       return;
     }
 
-    // if (formData.number && !isValidPhoneNumber(formData.number)) {
-    //   alert("Please enter a valid phone number.");
-    //   return;
-    // }
-
     const newUser = { ...formData, id: uuidv4() };
     console.log("Form submitted:", newUser);
+  };
+
+  const isValidPhoneNumber = (phoneNumber: string) => {
+    const phoneNumberRegex = /^\+?(\d[\d\s-]*)$/;
+    return phoneNumberRegex.test(phoneNumber);
   };
 
   const isValidEmail = (email: string) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
   };
-
-  // const isValidPhoneNumber = (phoneNumber: number) => {
-  //   const phoneNumberString = phoneNumber.toString();
-  //   const phoneRegex = /^\+\d{1,3} \d{9,}$/;
-  //   return phoneRegex.test(phoneNumberString);
-  // };
 
   return (
     <form onSubmit={handleSubmit}>
@@ -103,11 +96,11 @@ const RegistrationForm: NextPage = () => {
           onChange={handleInputChange}
         />
         <input
-          type="tel"
+          type="text"
           name="number"
           id="number"
           placeholder="+44 7911 123456"
-          value={formData.number !== 0 ? formData.number : ""}
+          value={formData.number}
           onChange={handleInputChange}
         />
       </div>

@@ -36,7 +36,7 @@ export interface UserType {
   name: string;
   surname: string;
   email: string;
-  number: number;
+  number: string;
   image: string;
   isLoggedIn: boolean;
 }
@@ -52,7 +52,7 @@ export interface RegistrationFormType {
   name: string;
   surname: string;
   email: string;
-  number: number;
+  number: string;
   image: string;
   socialMedia: boolean;
 }
