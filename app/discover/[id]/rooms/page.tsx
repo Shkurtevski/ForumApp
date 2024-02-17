@@ -7,15 +7,14 @@ export const metadata: { title: string } = {
   title: "Rooms",
 };
 
+const discoverApiUrl = process.env.DISCOVER_API_URL || "";
+
 async function getDataType(id: string) {
-  const res = await fetch(
-    `https://forum-app-z6fe.onrender.com/discover/${id}`,
-    {
-      next: {
-        revalidate: 60,
-      },
-    }
-  );
+  const res = await fetch(`${discoverApiUrl}/${id}`, {
+    next: {
+      revalidate: 60,
+    },
+  });
 
   if (!res.ok) {
     notFound();

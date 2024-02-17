@@ -20,22 +20,13 @@ const RegistrationForm: NextPage = () => {
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value, type, checked } = e.target;
 
-    // Validate phone number format
-    if (name === "number") {
-      if (!isValidPhoneNumber(value)) {
-        // You can show an error message or take other actions
-        console.log("Invalid phone number format");
-        return;
-      }
-    }
-
     setFormData((prevState) => ({
       ...prevState,
       [name]: type === "checkbox" ? checked : value,
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     if (!formData.name || !formData.surname || !formData.email) {
@@ -47,13 +38,35 @@ const RegistrationForm: NextPage = () => {
       return;
     }
 
-    const newUser = { ...formData, id: uuidv4() };
-    console.log("Form submitted:", newUser);
-  };
+    try {
+      const newUser = { ...formData, id: uuidv4() };
+      const res = await fetch(process.env.USERS_API_URL || "", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(newUser),
+      });
+      if (!res.ok) {
+        throw new Error("Failet to submit form");
+      }
 
-  const isValidPhoneNumber = (phoneNumber: string) => {
-    const phoneNumberRegex = /^\+?(\d[\d\s-]*)$/;
-    return phoneNumberRegex.test(phoneNumber);
+      const data = await res.json();
+
+      console.log("Form submitted successfully:", data);
+
+      setFormData({
+        id: "",
+        name: "",
+        surname: "",
+        email: "",
+        number: "",
+        image: "",
+        socialMedia: false,
+      });
+    } catch (error: any) {
+      console.error("Error submitting form:", error);
+    }
   };
 
   const isValidEmail = (email: string) => {
@@ -76,6 +89,7 @@ const RegistrationForm: NextPage = () => {
           placeholder="Katie"
           value={formData.name}
           onChange={handleInputChange}
+          required
         />
         <input
           type="text"
@@ -84,6 +98,7 @@ const RegistrationForm: NextPage = () => {
           placeholder="Shaw"
           value={formData.surname}
           onChange={handleInputChange}
+          required
         />
       </div>
       <div className="form-group-custom-one">
@@ -94,6 +109,7 @@ const RegistrationForm: NextPage = () => {
           placeholder="katieshaw@gmail.com"
           value={formData.email}
           onChange={handleInputChange}
+          required
         />
         <input
           type="text"
@@ -102,6 +118,7 @@ const RegistrationForm: NextPage = () => {
           placeholder="+44 7911 123456"
           value={formData.number}
           onChange={handleInputChange}
+          required
         />
       </div>
       <div className="form-group-wrapper">

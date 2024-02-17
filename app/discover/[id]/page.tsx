@@ -21,8 +21,10 @@ export const metadata: PageMetadata = {
   ogType: "website",
 };
 
+const discoverApiUrl = process.env.DISCOVER_API_URL || "";
+
 export async function generateStaticParams() {
-  const res = await fetch(`https://forum-app-z6fe.onrender.com/discover`);
+  const res = await fetch(discoverApiUrl);
 
   const data = await res.json();
 
@@ -32,14 +34,11 @@ export async function generateStaticParams() {
 }
 
 async function getDataType(id: string) {
-  const res = await fetch(
-    `https://forum-app-z6fe.onrender.com/discover/${id}`,
-    {
-      next: {
-        revalidate: 60,
-      },
-    }
-  );
+  const res = await fetch(`${discoverApiUrl}/${id}`, {
+    next: {
+      revalidate: 60,
+    },
+  });
 
   if (!res.ok) {
     notFound();

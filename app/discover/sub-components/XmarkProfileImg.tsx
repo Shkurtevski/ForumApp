@@ -5,7 +5,8 @@ import { UserType } from "../../interfaces";
 import { NextPage } from "next";
 
 async function getUser() {
-  const res = await fetch("https://forum-app-z6fe.onrender.com/users", {
+  const usersApiUrl = process.env.USERS_API_URL || "";
+  const res = await fetch(usersApiUrl, {
     next: {
       revalidate: 0,
     },
