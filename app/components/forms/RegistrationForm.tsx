@@ -19,9 +19,20 @@ const RegistrationForm: NextPage = () => {
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value, type, checked } = e.target;
+
+    let newValue: string | number | boolean;
+
+    if (type === "checkbox") {
+      newValue = checked;
+    } else if (name === "number") {
+      newValue = /^\d*$/.test(value) ? parseInt(value, 10) : "";
+    } else {
+      newValue = value;
+    }
+
     setFormData((prevState) => ({
       ...prevState,
-      [name]: type === "checkbox" ? checked : value,
+      [name]: newValue,
     }));
   };
 
@@ -37,14 +48,25 @@ const RegistrationForm: NextPage = () => {
       return;
     }
 
-    if (formData.number && !isValidPhoneNumber(formData.number)) {
-      alert("Please enter a valid phone number.");
-      return;
-    }
+    // if (formData.number && !isValidPhoneNumber(formData.number)) {
+    //   alert("Please enter a valid phone number.");
+    //   return;
+    // }
 
     const newUser = { ...formData, id: uuidv4() };
     console.log("Form submitted:", newUser);
   };
+
+  const isValidEmail = (email: string) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
+  // const isValidPhoneNumber = (phoneNumber: number) => {
+  //   const phoneNumberString = phoneNumber.toString();
+  //   const phoneRegex = /^\+\d{1,3} \d{9,}$/;
+  //   return phoneRegex.test(phoneNumberString);
+  // };
 
   return (
     <form onSubmit={handleSubmit}>
@@ -80,7 +102,14 @@ const RegistrationForm: NextPage = () => {
           value={formData.email}
           onChange={handleInputChange}
         />
-        <input type="tel" name="tel" id="tel" placeholder="+44 7911 123456" />
+        <input
+          type="tel"
+          name="number"
+          id="number"
+          placeholder="+44 7911 123456"
+          value={formData.number !== 0 ? formData.number : ""}
+          onChange={handleInputChange}
+        />
       </div>
       <div className="form-group-wrapper">
         <div className="form-group-checkboxes">
